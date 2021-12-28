@@ -1,7 +1,9 @@
 import { Response, Router } from 'express';
 import multer from 'multer';
 import multerConfig from './config/multer'
+import { GetPlaysController } from './controllers/GetPlaysController';
 import { PlaysController } from './controllers/PlaysController';
+import { ResetPlaysController } from './controllers/ResetPlaysController';
 
 
 export const routes = Router();
@@ -28,5 +30,8 @@ routes.post('/user', multer(multerConfig).single('file'), async (s3, res: Respon
     }
 
 });
+
+routes.get('/luck', new GetPlaysController().handle)
+routes.post('/reset', new ResetPlaysController().handle)
 
 
