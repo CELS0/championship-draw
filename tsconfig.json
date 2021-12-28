@@ -1,0 +1,23 @@
+{
+   "compilerOptions": {
+     "lib": ["ESNext"],
+     "moduleResolution": "node",
+     "emitDecoratorMetadata": true,
+     "experimentalDecorators": true,
+     "noUnusedLocals": true,
+     "noUnusedParameters": true,
+     "removeComments": true,
+     "sourceMap": true,
+     "target": "es2018",
+     "typeRoots": ["./src/@types"],
+     "outDir": "lib",
+     "module": "commonjs", 
+     "allowJs": true,                                            
+     "esModuleInterop": true,                  
+     "skipLibCheck": true,                     
+     "forceConsistentCasingInFileNames": true  
+   },
+   "include":[
+     "src/**/*.ts"
+   ]
+ }
