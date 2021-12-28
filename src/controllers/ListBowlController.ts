@@ -3,7 +3,6 @@ import { ListBowlService } from '../services/ListBowlService'
 
 class ListBowlController {
     async handle(req: Request, res: Response){
-
         const { bowl } = req.query;
 
         const listBowlService = new ListBowlService();
