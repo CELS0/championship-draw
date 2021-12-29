@@ -1,13 +1,13 @@
-import { Response } from "express";
 import { ResetPlaysService } from "../services/ResetPlaysService";
+import { Request, Response } from "express";
 
 class ResetPlaysController {
-    async handle(res: Response) {
+    async handle(req: Request, res: Response) {
         const resetPlaysService = new ResetPlaysService();
+        req
+        const result = await resetPlaysService.reset();
 
-        await resetPlaysService.reset();
-
-        res.status(200).json({message: "Rest Success"})
+        res.status(200).json(result)
     }
 }
 
